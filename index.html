@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026竹北光節/竹北燈會 - 招商報名</title>
+    <meta name="description" content="盛世之境-「歷年最強」2026竹北光節/竹北燈會市集招商報名">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (透過 CDN 使用) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 自定義 Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'night-dark': '#0f172a',
+                        'night-light': '#1e293b',
+                        'brand-gold': '#fbbf24',
+                        'brand-purple': '#a855f7',
+                        'brand-pink': '#ec4899',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://i.meee.com.tw/GP74iYj.jpg')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 自定義額外樣式 */
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .glass-effect {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.5), 0 0 20px rgba(236, 72, 153, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 隱藏檔案上傳的預設樣式 */
+        input[type="file"]::file-selector-button {
+            margin-right: 10px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background-color: #fbbf24;
+            color: #0f172a;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background .2s;
+        }
+        input[type="file"]::file-selector-button:hover {
+            background-color: #f59e0b;
+        }
+        
+        /* Loading Spinner */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #fbbf24;
+            width: 20px;
+            height: 20px;
+            -webkit-animation: spin 1s linear infinite; /* Safari */
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-night-dark text-white selection:bg-brand-gold selection:text-night-dark">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-effect transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-wider text-white">
+                <i class="fa-solid fa-horse-head text-brand-gold mr-2"></i>2026竹北光節
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-brand-gold transition-colors">活動資訊</a>
+                <a href="#rules" class="hover:text-brand-gold transition-colors">招商規範</a>
+                <a href="#apply" class="px-5 py-2 bg-gradient-to-r from-brand-purple to-brand-pink rounded-full hover:shadow-lg hover:shadow-brand-purple/50 transition-all">立即報名</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-night-dark/60 via-night-dark/40 to-night-dark"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <div class="inline-block px-4 py-1 border border-brand-gold/50 rounded-full bg-black/30 mb-4 backdrop-blur-sm animate-pulse">
+                <span class="text-brand-gold font-bold tracking-widest">歷年最強．盛世之境</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight neon-text">
+                2026 竹北光節<br>
+                <span class="text-3xl md:text-5xl text-white/90 font-bold mt-2 block">暨 竹北燈會</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 font-light max-w-2xl mx-auto">
+                科技 × 美學｜大型燈光裝置｜互動藝術｜馬年意象<br>
+                誠邀全台優質品牌，共創國際級光影藝術饗宴
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#apply" class="px-8 py-4 bg-brand-gold text-night-dark font-black rounded-lg text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(251,191,36,0.4)]">
+                    <i class="fa-solid fa-store mr-2"></i> 我要擺攤
+                </a>
+                <a href="#about" class="px-8 py-4 border border-white/30 bg-white/10 backdrop-blur-md rounded-lg text-lg font-bold hover:bg-white/20 transition-all">
+                    了解更多
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Event Info Section -->
+    <section id="about" class="py-20 bg-night-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">活動資訊</h2>
+                <div class="w-24 h-1 bg-brand-purple mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Date -->
+                <div class="bg-night-light p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition-all group">
+                    <div class="w-14 h-14 bg-brand-purple/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-purple transition-colors">
+                        <i class="fa-regular fa-calendar-check text-2xl text-brand-purple group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">活動日期</h3>
+                    <p class="text-gray-400">2月27日 至 3月15日</p>
+                    <p class="text-brand-gold font-bold mt-2">共 17 天</p>
+                </div>
+
+                <!-- Time -->
+                <div class="bg-night-light p-8 rounded-2xl border border-white/5 hover:border-brand-pink/50 transition-all group">
+                    <div class="w-14 h-14 bg-brand-pink/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-pink transition-colors">
+                        <i class="fa-regular fa-clock text-2xl text-brand-pink group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">營業時間</h3>
+                    <p class="text-gray-400"><span class="text-white">平日</span> 14:00 – 21:30</p>
+                    <p class="text-gray-400"><span class="text-white">假日</span> 12:00 – 22:00</p>
+                </div>
+
+                <!-- Location -->
+                <div class="bg-night-light p-8 rounded-2xl border border-white/5 hover:border-blue-500/50 transition-all group">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
+                        <i class="fa-solid fa-map-location-dot text-2xl text-blue-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">活動地點</h3>
+                    <p class="text-gray-400">竹北水圳公園</p>
+                    <a href="https://maps.google.com/?q=竹北水圳公園" target="_blank" class="text-sm text-blue-400 hover:underline mt-2 inline-block">查看地圖 <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <!-- Categories -->
+                <div class="bg-night-light p-8 rounded-2xl border border-white/5 hover:border-brand-gold/50 transition-all group">
+                    <div class="w-14 h-14 bg-brand-gold/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-gold transition-colors">
+                        <i class="fa-solid fa-utensils text-2xl text-brand-gold group-hover:text-night-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">招募類型</h3>
+                    <p class="text-gray-400">美食、文創、遊樂</p>
+                    <p class="text-gray-400">及 各式特色料理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules & Fee Section -->
+    <section id="rules" class="py-20 bg-gradient-to-b from-night-light to-night-dark relative overflow-hidden">
+        <!-- Decorative Circle -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <!-- Left: Pricing Card -->
+                <div class="w-full lg:w-1/3">
+                    <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-gold to-brand-purple"></div>
+                        <h3 class="text-2xl font-bold text-gray-300 mb-2">攤位費用</h3>
+                        <div class="text-5xl font-black text-brand-gold mb-6">
+                            $60,000 <span class="text-lg text-gray-400 font-normal">/ 17天</span>
+                        </div>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center text-gray-300">
+                                <i class="fa-solid fa-check-circle text-green-500 mr-3"></i> 提供歐式帳篷
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fa-solid fa-check-circle text-green-500 mr-3"></i> 基礎電力供應
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fa-solid fa-check-circle text-green-500 mr-3"></i> 180cm*60cm 桌子 x1
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fa-solid fa-check-circle text-green-500 mr-3"></i> 椅子 x2
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-black/30 rounded-xl p-4 text-center border border-white/5">
+                            <p class="text-sm text-gray-400">保證金</p>
+                            <p class="text-xl font-bold text-white">$10,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Rules & Specs -->
+                <div class="w-full lg:w-2/3">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">招商規範與注意事項</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center mt-1">
+                                <i class="fa-solid fa-fire-extinguisher text-red-500"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-white">嚴禁明火</h4>
+                                <p class="text-gray-400 mt-1">全時段全場不能使用明火，必須嚴格遵守暗火規定。請使用電磁爐、電烤盤等設備。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center mt-1">
+                                <i class="fa-solid fa-bolt text-yellow-500"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-white">電力規範</h4>
+                                <p class="text-gray-400 mt-1">僅提供 <span class="text-brand-gold font-bold">110V</span> 電力。現場<span class="text-red-400 font-bold">不提供 220V</span> 電力，請自行評估設備需求並於報名表詳細填寫瓦數。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mt-1">
+                                <i class="fa-solid fa-clipboard-check text-blue-500"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-white">審核機制</h4>
+                                <p class="text-gray-400 mt-1">各品項設有總量限制，避免同質性過高。資料需送審，錄取將以 Line 或 Email 通知，並邀請進入專屬群組。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply" class="py-20 bg-night-dark">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="text-brand-gold font-bold tracking-widest uppercase">Join Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">品牌進駐報名</h2>
+                <p class="text-gray-400 mt-4">請完整填寫以下資訊，我們將盡快進行審核。</p>
+            </div>
+
+            <form id="vendorForm" class="bg-night-light p-8 md:p-12 rounded-3xl shadow-2xl border border-white/5">
+                
+                <!-- Section: Brand Info -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center border-b border-gray-700 pb-3">
+                        <span class="bg-brand-purple w-8 h-8 rounded-full flex items-center justify-center text-xs mr-3">1</span>
+                        品牌資訊
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="md:col-span-2">
+                            <label class="block text-gray-400 text-sm font-bold mb-2" for="brandName">品牌名稱 <span class="text-red-500">*</span></label>
+                            <input class="w-full bg-night-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors" id="brandName" type="text" placeholder="請輸入您的品牌名稱" required>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <label class="block text-gray-400 text-sm font-bold mb-2" for="products">販賣品項 <span class="text-red-500">*</span></label>
+                            <textarea class="w-full bg-night-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors h-24" id="products" placeholder="請列出主要販售商品" required></textarea>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-gray-400 text-sm font-bold mb-2" for="photos">攤位照片 / 產品目錄 <span class="text-red-500">*</span></label>
+                            <div class="relative border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-brand-gold transition-colors bg-night-dark">
+                                <input type="file" id="photos" class="w-full h-full opacity-0 absolute top-0 left-0 cursor-pointer" multiple required onchange="updateFileName(this)">
+                                <div class="pointer-events-none">
+                                    <i class="fa-solid fa-cloud-arrow-up text-3xl text-gray-500 mb-2"></i>
+                                    <p class="text-sm text-gray-400" id="file-label">點擊或拖曳上傳照片 (可多選)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Contact Info -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center border-b border-gray-700 pb-3">
+                        <span class="bg-brand-purple w-8 h-8 rounded-full flex items-center justify-center text-xs mr-3">2</span>
+                        聯絡人資訊
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-400 text-sm font-bold mb-2" for="contactName">負責人姓名 <span class="text-red-500">*</span></label>
+                            <input class="w-full bg-night-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors" id="contactName" type="text" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-400 text-sm font-bold mb-2" for="phone">手機號碼 <span class="text-red-500">*</span></label>
+                            <input class="w-full bg-night-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors" id="phone" type="tel" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-400 text-sm font-bold mb-2" for="lineId">Line ID <span class="text-red-500">*</span></label>
+                            <input class="w-full bg-night-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors" id="lineId" type="text" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-400 text-sm font-bold mb-2" for="email">E-mail <span class="text-red-500">*</span></label>
+                            <input class="w-full bg-night-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors" id="email" type="email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Requirements -->
+                <div class="mb-10">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center border-b border-gray-700 pb-3">
+                        <span class="bg-brand-purple w-8 h-8 rounded-full flex items-center justify-center text-xs mr-3">3</span>
+                        設備需求
+                    </h3>
+                    
+                    <div>
+                        <label class="block text-gray-400 text-sm font-bold mb-2" for="power">用電需求 (110V 瓦數) <span class="text-red-500">*</span></label>
+                        <input class="w-full bg-night-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors" id="power" type="number" placeholder="例如：1500W" required>
+                        <p class="text-xs text-red-400 mt-2"><i class="fa-solid fa-circle-exclamation mr-1"></i> 請務必誠實填寫，現場不提供 220V 電力，禁用明火。</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-brand-gold to-orange-500 text-night-dark font-black py-4 rounded-lg text-lg shadow-lg hover:shadow-orange-500/40 transform hover:scale-[1.02] transition-all flex items-center justify-center">
+                    <span>送出報名申請</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-2xl font-black text-white mb-4">2026 竹北光節</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-line text-2xl"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm mb-2">&copy; 2026 Zhubei Light Festival. All Rights Reserved.</p>
+            <p class="text-gray-600 text-xs">Powered by <span class="text-gray-500 font-bold">電商神助手</span></p>
+        </div>
+    </footer>
+
+    <!-- Success Modal (Hidden by default) -->
+    <div id="successModal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-night-light border border-brand-gold/30 p-8 rounded-2xl shadow-2xl max-w-sm w-full mx-4 text-center transform scale-90 transition-transform duration-300" id="modalContent">
+            <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-check text-3xl text-green-500"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">報名已送出！</h3>
+            <p class="text-gray-400 mb-6">感謝您的申請。我們將進行資料審核，錄取結果將透過 Line 或 Email 通知。</p>
+            <button onclick="closeModal()" class="w-full bg-brand-gold text-night-dark font-bold py-3 rounded-lg hover:bg-white transition-colors">
+                確認
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript logic -->
+    <script>
+        // *** 重要：請將此網址替換為您的 Google Apps Script 部署網址 ***
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyfS8KSjFk_xnJn9M9inkoj2zD5125xAxRcdtDUxtFZrdyQrBcy7C69TgpY15WamExM/exec'; 
+
+        // File Upload UI Interaction
+        function updateFileName(input) {
+            const label = document.getElementById('file-label');
+            if (input.files && input.files.length > 0) {
+                if(input.files.length === 1){
+                    label.innerHTML = `<span class="text-brand-gold">${input.files[0].name}</span>`;
+                } else {
+                    label.innerHTML = `<span class="text-brand-gold">已選擇 ${input.files.length} 個檔案</span>`;
+                }
+            } else {
+                label.innerText = '點擊或拖曳上傳照片 (可多選)';
+            }
+        }
+
+        // Helper: Convert File to Base64
+        function getBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => resolve({
+                    name: file.name,
+                    type: file.type,
+                    data: reader.result
+                });
+                reader.onerror = error => reject(error);
+            });
+        }
+
+        // Form Submission Logic
+        document.getElementById('vendorForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Check if SCRIPT_URL is set
+            if(SCRIPT_URL.includes('請貼在這裡')) {
+                alert("請先設定 Google Apps Script 網址！(請見程式碼底部)");
+                return;
+            }
+
+            // Validation
+            const requiredIds = ['brandName', 'contactName', 'phone', 'lineId', 'email', 'power'];
+            let isValid = true;
+            requiredIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (!el.value.trim()) isValid = false;
+            });
+            if (!isValid) {
+                alert("請填寫所有必填欄位");
+                return;
+            }
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('span');
+            const originalText = btnText.innerText;
+            
+            // UI Loading State
+            btnText.innerHTML = '<div class="loader"></div> 資料傳送中...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            try {
+                // 1. Prepare Photos
+                const photoInput = document.getElementById('photos');
+                const photoPromises = Array.from(photoInput.files).map(file => getBase64(file));
+                const filesData = await Promise.all(photoPromises);
+
+                // 2. Prepare Form Data
+                const formData = {
+                    brandName: document.getElementById('brandName').value,
+                    products: document.getElementById('products').value,
+                    contactName: document.getElementById('contactName').value,
+                    phone: document.getElementById('phone').value,
+                    lineId: document.getElementById('lineId').value,
+                    email: document.getElementById('email').value,
+                    power: document.getElementById('power').value,
+                    files: filesData
+                };
+
+                // 3. Send Data
+                // Using 'no-cors' mode is standard for simple GAS web apps, 
+                // but it means we can't read the response JSON directly. 
+                // Assuming success if no network error.
+                await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    body: JSON.stringify(formData)
+                });
+
+                // 4. Success UI
+                const modal = document.getElementById('successModal');
+                const modalContent = document.getElementById('modalContent');
+                
+                modal.classList.remove('hidden');
+                void modal.offsetWidth; 
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-90');
+                modalContent.classList.add('scale-100');
+                
+                // Reset Form
+                document.getElementById('vendorForm').reset();
+                document.getElementById('file-label').innerText = '點擊或拖曳上傳照片 (可多選)';
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('傳送失敗，請檢查網路連線或稍後再試。');
+            } finally {
+                // Reset Button
+                btnText.innerText = originalText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }
+        });
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-90');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.add('bg-night-dark/90');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.remove('bg-night-dark/90');
+            }
+        });
+    </script>
+</body>
+</html>
